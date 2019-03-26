@@ -1,0 +1,41 @@
+database: parkingsystem
+
+tables:
+	
+	ps_user(用户表)
+		user_id		int(10)		用户id
+		user_name	var(100)	用户名
+		user_password	var(100)	用户密码
+		user_realname	var(100)	用户真实姓名
+		user_gender	var(100)	用户性别
+		user_card	var(100)	用户车牌
+		user_balance	double(100)	用户余额
+		
+
+	ps_parking_place(车位)
+		park_id		int(10)		车位id
+		park_state	int(10)		车位状态
+
+	ps_topup_log(充值日志)
+		tl_id		int(10)		充值日志id
+		tl_time		timep		充值时间
+		tl_money	double(100)	充值金额
+		tl_balance	double(100)	充值后余额
+		user_id		int(10)		用户id
+
+	ps_parking_log(停车日志)
+		pl_id		int(10)		停车日志id
+		pl_parking	int(10)		车位id
+		pl_start_time	timep		开始时间
+		pl_end_time	timep		结束时间
+		pl_money	double(100)	花费金钱
+		user_id		int(10)		用户id
+
+	ps_admin(管理员)
+		admin_id	int(10)		管理员id
+		admin_username	var(100)	管理员账号
+		admin_password	var(100)	管理员密码
+		
+	ps_button(开关)	
+		bt_pid		int(10)		开关id
+		bt_state	int(10)		开关状态
